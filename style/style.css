@@ -1,0 +1,31 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(#fac96d,#ff3cae);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+}
+
+.Headtext p, .Subtext p {
+    margin: 0;
+}
+
+.Headtext p {
+    font-family: "Honk", system-ui;
+    font-size: 15vw;
+    color: #333;
+}
+
+.Subtext p {
+    font-family: "Mukta", sans-serif;
+    font-size: 5vw;
+    color: black;
+}
