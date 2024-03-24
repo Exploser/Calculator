@@ -18,7 +18,18 @@ document.addEventListener('DOMContentLoaded', function () {
             case '+':
                 result = previous + current;
                 break;
-
+            case '-':
+                result = previous - current;
+                break;
+            case '*':
+                result = previous * current;
+                break;
+            case '%':
+                result = previous % current;
+                break;
+            case '/':
+                result = previous / current;
+                break;
             default:
                 return;
         }
@@ -43,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     calculate();
                     break;
                 default:
-                    if (['+', '-', '*', '/'].includes(value)) {
+                    if (['+', '-', '*', '/', '%'].includes(value)) {
                         prevVal = currentVal;
                         currentVal = '';
                         currentOperation = value;
