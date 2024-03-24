@@ -5,6 +5,9 @@ A simple, web-based calculator that supports basic arithmetic operations. Built 
 
 ![Calculator Screenshot](./contents/screenshot.png) 
 
+## Live
+-  Check the project live at https://exploser.github.io/Calculator/
+
 ## Features
 -  Basic arithmetic operations: addition, subtraction, multiplication, and division
 -  Clean, responsive UI that works on both desktop and mobile browsers
