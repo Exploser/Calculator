@@ -13,6 +13,27 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', () => {
             const value = button.getAttribute('data-value');
             console.log(value);
+            switch (value) {
+                case 'C':
+                    currentVal = '';
+                    prevVal = '';
+                    currentOperation = null;
+                    updateDisplay('0');
+                    break;
+                case '=':
+                    // calculate(); add a calculate function
+                    break;
+                default:
+                    if (['+', '-', '*', '/'].includes(value)) {
+                        prevVal = currentVal;
+                        currentVal = '';
+                        currentOperation = value;
+                    } else {
+                        currentVal += value;
+                        updateDisplay(currentVal);
+                    }
+                    break;
+            }
         });
     });
 });
