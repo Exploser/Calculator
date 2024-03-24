@@ -1,12 +1,12 @@
 /* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(#fac96d,#ff3cae);
+    background-image: linear-gradient(#fac96d, #ff3cae);
     margin: 0;
     padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: start;
+    flex-direction: column;
+    align-items: center;
     min-height: 100vh;
 }
 
@@ -14,18 +14,141 @@ header {
     text-align: center;
 }
 
-.Headtext p, .Subtext p {
+.Headtext p,
+.Subtext p {
     margin: 0;
 }
 
 .Headtext p {
     font-family: "Honk", system-ui;
     font-size: 15vw;
+    /* Responsive font size for large screens */
     color: #333;
 }
 
 .Subtext p {
     font-family: "Mukta", sans-serif;
     font-size: 5vw;
+    /* Responsive font size for large screens */
     color: black;
 }
+
+/* General Calculator Styling */
+.Calculator {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: max-content;
+}
+
+/* Calculator Screen Styling */
+.calc-screen {
+    background-color: #eee;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 2em;
+    min-height: 60px;
+    max-width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.calc-screen p {
+    margin: 0;
+    /* Reset default margin */
+}
+
+/* Calculator Buttons Styling */
+.calc-buttons {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+
+}
+
+.button {
+    max-width: 20vw;
+    width: 50px;
+    height: 50px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1em;
+    color: #333;
+    outline: none;
+}
+.row-5 {
+    display: flex;
+    max-width: 20vw;
+    justify-content: space-evenly;
+    height: 50px;
+    #zero, #equals{
+        width: 45%;
+    }
+
+}
+
+.button:active {
+    background-color: #e6e6e6;
+    /* Button click effect */
+}
+
+
+/* Aligns the text inside the button to the left for the double button */
+.double button {
+    text-align: left;
+    padding-left: 25px;
+    /* Indent text for the 0 button */
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 926px) {
+    .Headtext p {
+        font-size: 10vw;
+    }
+
+    .Subtext p {
+        font-size: 3vw;
+    }
+
+    .Calculator {
+        width: 70vw;
+    }
+
+    .button{
+        width: 70px;
+    }
+
+    .row-5 {
+        display: flex;
+        flex-direction: row;
+        max-width: 70vw;
+        justify-content: space-evenly;
+        height: 50px;
+        #zero, #equals{
+            height: 50px;
+            width: 45%;
+        }
+    }
+
+    .calc-screen {
+        background-color: #eee;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        text-align: right;
+        font-size: 2em;
+        min-height: 60px;
+        max-width: 60vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+/* Add any additional styles for hover effects or active states as desired */
