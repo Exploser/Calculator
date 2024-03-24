@@ -43,7 +43,7 @@ header {
 }
 
 /* Calculator Screen Styling */
-.calc-screen {
+.Calculator-display {
     background-color: #eee;
     padding: 20px;
     margin-bottom: 20px;
@@ -57,7 +57,7 @@ header {
     justify-content: flex-end;
 }
 
-.calc-screen p {
+.Calculator-display p {
     margin: 0;
     /* Reset default margin */
 }
@@ -70,7 +70,7 @@ header {
 
 }
 
-.button {
+.Calculator-button {
     max-width: 20vw;
     width: 50px;
     height: 50px;
@@ -93,7 +93,7 @@ header {
 
 }
 
-.button:active {
+.Calculator-button:active {
     background-color: #e6e6e6;
     /* Button click effect */
 }
@@ -120,7 +120,7 @@ header {
         width: 70vw;
     }
 
-    .button{
+    .Calculator-button{
         width: 70px;
     }
 
@@ -136,7 +136,7 @@ header {
         }
     }
 
-    .calc-screen {
+    .Calculator-display {
         background-color: #eee;
         padding: 20px;
         margin-bottom: 20px;
