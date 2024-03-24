@@ -9,6 +9,25 @@ document.addEventListener('DOMContentLoaded', function () {
         display.innerText = text;
     };
 
+    const calculate = () => {
+        if (!currentOperation || !prevVal) return;
+        const current = parseFloat(currentVal);
+        const previous = parseFloat(prevVal);
+        let result = '';
+        switch (currentOperation) {
+            case '+':
+                result = previous + current;
+                break;
+
+            default:
+                return;
+        }
+        console.log(result);
+        updateDisplay(result);
+        currentVal = result;
+        prevVal = '';
+    };
+
     document.querySelectorAll('.Calculator-button').forEach(button => {
         button.addEventListener('click', () => {
             const value = button.getAttribute('data-value');
@@ -21,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     updateDisplay('0');
                     break;
                 case '=':
-                    // calculate(); add a calculate function
+                    calculate();
                     break;
                 default:
                     if (['+', '-', '*', '/'].includes(value)) {
